@@ -11,7 +11,7 @@
     <script src="vendor/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <form>
+    <form name="registratie" onsubmit="return validateForm()">
         <h2>Registreer</h2>
         <p>Meld je aan bij Anoroc Services, wij beschermen jouw software tegen malware!</p>
 
@@ -21,29 +21,41 @@
                     <label for="inputVoornaam">Voornaam</label>
                     <input id="inputVoornaam" type="text" class="form-control" placeholder="Uw voornaam">
                 </div>
-                <div class="form-group">
-                      <label for="inputGebruikersnaam">Gebruikersnaam</label>
-                      <input id="inputGebruikersnaam" type="text" class="form-control" placeholder="u911236">
-                </div>
-                <div class="form-group">
-                      <label for="inputWachtwoord">Wachtwoord</label>
-                      <input id="inputWachtwoord" type="password" class="form-control">
-                      <small id="wachtwoordHelp" class="form-text text-muted">Je wachtwoord moet minstens 8 tekens lang zijn</small>
-                </div>
             </div>
             <div class="col">
                 <div class="form-group">
                     <label for="inputNaam">Naam</label>
                     <input id="inputNaam" type="text" class="form-control" placeholder="Uw naam">
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
                 <div class="form-group">
-                      <label for="inputEmail">E-mailadres</label>
-                      <input id="inputEmail" type="email" class="form-control" placeholder="mail@example.com">
-                </div>
+                    <label for="inputGebruikersnaam">Gebruikersnaam</label>
+                    <input id="inputGebruikersnaam" type="text" class="form-control" placeholder="u911236">
+              </div>
+            </div>
+            <div class="col">
                 <div class="form-group">
-                      <label for="inputWachtwoordHerhaal">Herhaal wachtwoord</label>
-                      <input id="inputWachtwoordHerhaal" type="password" class="form-control">
-                </div>
+                    <label for="inputEmail">E-mailadres</label>
+                    <input id="inputEmail" type="email" class="form-control" placeholder="mail@example.com">
+              </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="inputWachtwoord">Wachtwoord</label>
+                    <input id="inputWachtwoord" type="password" class="form-control">
+                    <small id="wachtwoordHelp" class="form-text text-muted">Je wachtwoord moet minstens 8 tekens lang zijn</small>
+              </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="inputWachtwoordHerhaal">Herhaal wachtwoord</label>
+                    <input id="inputWachtwoordHerhaal" type="password" class="form-control">
+              </div>
             </div>
         </div>
 
@@ -133,14 +145,16 @@
         <button type="submit" class="btn btn-primary">Wave your magic wand</button>
     </form>
     <div id="naastForm">
-        <div class="alert alert-danger" role="alert">
-            Fout
+        <div class="alert alert-danger d-none" role="alert">
+            <h4>Yikes, errors...</h4>
+            <span id="lijstErrors"></span>
         </div>
-        <div class="alert alert-success" role="alert">
-            Goed gedaan!
+        <div class="alert alert-success d-none" role="alert">
+            <h4>Goed gedaan!</h4>
+            aww yeah, je werd geregistreerd.
         </div>
-        <div class="alert alert-info" role="alert">
-            Betalingswijze
+        <div class="alert alert-info d-none" role="alert">
+            <h4>Betalingswijze</h4>
         </div>
     </div>
     
