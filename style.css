@@ -1,0 +1,12 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+form{
+    width: 50%;
+    margin: auto;
+}
+#groepLinks, #groepRechts{
+    width: 50%;
+    float: left;
+}
