@@ -4,9 +4,13 @@
 }
 form{
     width: 50%;
-    margin: auto;
-}
-#groepLinks, #groepRechts{
-    width: 50%;
+    margin-left: 25%;
+    margin-top: 20px;
+    border: solid gray 1px;
+    padding: 20px;
     float: left;
+}
+#naastForm{
+    float: left;
+    margin-top: 10%;
 }
