@@ -11,7 +11,7 @@
     <script src="vendor/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <form name="registratie" onsubmit="return validateForm()">
+    <form name="registratie" onsubmit="return validateForm()" method="post">
         <h2>Registreer</h2>
         <p>Meld je aan bij Anoroc Services, wij beschermen jouw software tegen malware!</p>
 
@@ -124,19 +124,19 @@
             <div class="col">
                 <h3>Betaling</h3>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="Betaling" id="radioBankingApp" value="bankingApp" checked>
+                    <input class="form-check-input betaling" type="radio" name="Betaling" id="radioBankingApp" value="banking app">
                     <label class="form-check-label" for="radioBankingApp">Banking app</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="Betaling" id="radioOverschrijving" value="overschrijving" checked>
+                    <input class="form-check-input betaling" type="radio" name="Betaling" id="radioOverschrijving" value="overschrijving">
                     <label class="form-check-label" for="radioOverschrijving">Overschrijving</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="Betaling" id="radioVisaCard" value="visaCard" checked>
+                    <input class="form-check-input betaling" type="radio" name="Betaling" id="radioVisaCard" value="visa card">
                     <label class="form-check-label" for="radioVisaCard">Visa card</label>
                 </div>
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="Betaling" id="radioPaypal" value="paypal" checked>
+                    <input class="form-check-input betaling" type="radio" name="Betaling" id="radioPaypal" value="paypal">
                     <label class="form-check-label" for="radioPaypal">Paypal</label>
                 </div>
             </div>
@@ -147,14 +147,15 @@
     <div id="naastForm">
         <div class="alert alert-danger d-none" role="alert">
             <h4>Yikes, errors...</h4>
-            <span id="lijstErrors"></span>
+            <p id="lijstErrors"></p>
         </div>
         <div class="alert alert-success d-none" role="alert">
             <h4>Goed gedaan!</h4>
-            aww yeah, je werd geregistreerd.
+            <p>aww yeah, je werd geregistreerd.</p>
         </div>
         <div class="alert alert-info d-none" role="alert">
             <h4>Betalingswijze</h4>
+            <p>Je betalingswijze is <span id="betalingswijze"></span>.</p>
         </div>
     </div>
     
